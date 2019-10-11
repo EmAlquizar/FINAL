@@ -24,16 +24,15 @@
           <li class="nav-item">
             <a class="nav-link {{ setActive('strands') }}" href="/strands">Strands</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{ setActive('subject-strands') }}" href="/subject-strands">Subject Strands</a>
+           <li class="nav-item">
+            <a class="nav-link {{ setActive('sections') }}" href="/sections">Sections</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ setActive('teachers') }}" href="/teachers">Teachers</a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link {{ setActive('sections') }}" href="/sections">Sections</a>
+          <li class="nav-item">
+            <a class="nav-link {{ setActive('subject-strands') }}" href="/subject-strands">Subject Strands</a>
           </li>
-          
         </ul>
       </div>
     </nav>

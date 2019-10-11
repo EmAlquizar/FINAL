@@ -15,8 +15,8 @@ class CreateSubjectStrandsTable extends Migration
     {
         Schema::create('subject__strands', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('subject_id');
-            $table->integer('strand_id');
+            $table->string('subject_id');
+            $table->string('strand_id');
             $table->integer('semester');
             $table->integer('grade_level');
             $table->timestamps();

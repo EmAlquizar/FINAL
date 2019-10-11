@@ -23,18 +23,17 @@ class SubjectStrandsController extends Controller
         return view('subjectstrands.create',compact('subjects', 'strands'));
     }
 
-    public function edit(Subject_Strands $subject_strand)
+     public function edit(Subject_Strands $subject_strand)
     {
-        return view('subjectstrands.edit',with('subject_strand', '$subjectstrands'));
+        $subjects = Subjects::all()
+        return view('subjectstrands.edit',compact('subject_strand', '$subjects'));
         //dd($subs);
-    }
-    public function update(Subject_Strands $subject_strand)
-    {
-        $subjectstrands->name = request()->name;
-        $subjectstrands->save();
+
+        $strands = Strands::all()
+        return view('subjectstrands.edit',compact('subject_strand', '$strands'));
     }
 
-    public function store()
+    public function store(Subjects $subject, Strands $strand)
     {
         request()->validate([
             //'subject_id' => 'required',
@@ -53,4 +52,10 @@ class SubjectStrandsController extends Controller
 
     	return redirect('/subject-strands');
     }
+    //public function update(Subject_Strands $subject_strand)
+    //{
+       // $subjectstrands->name = request()->name;
+        //$subjectstrands->save();
+   // }
+
 }
